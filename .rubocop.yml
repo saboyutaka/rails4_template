@@ -1,0 +1,32 @@
+# See default settings https://github.com/bbatsov/rubocop/blob/master/config/enabled.yml
+
+AllCops:
+  Includes:
+    - '**/Rakefile'
+  Excludes:
+    - 'vendor/bundle/**/*'
+    - 'db/schema.rb'
+    - 'config/initializers/secret_token.rb'
+    - 'spec/support/share_db_connection.rb'
+
+# Limit lines to 120 characters.
+LineLength:
+  Enabled: true
+  Max: 120
+
+# Avoid methods longer than 50 lines of code
+MethodLength:
+  Enabled: true
+  Max: 50
+
+# Add underscores to large numeric literals to improve their readability.
+NumericLiterals:
+  Enabled: false
+
+# Prefer ' strings when you don't need string interpolation or special symbols.
+StringLiterals:
+  Enabled: false
+
+# Document classes and non-namespace modules.
+Documentation:
+  Enabled: false
