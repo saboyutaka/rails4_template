@@ -2,7 +2,7 @@
 # Application Template
 #
 
-repo_url = "https://github.com/saboyutaka/rails4_template"
+repo_url = "https://raw.github.com/saboyutaka/rails4_template/master"
 
 @app_name = app_name
 
