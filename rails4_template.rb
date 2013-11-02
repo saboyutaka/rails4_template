@@ -12,8 +12,7 @@ remove_file 'Gemfile'
 get "#{repo_url}/Gemfile", "Gemfile"
 
 # Bundle install
-# run "bundle install --binstubs='.bundle/bin' --path='./vendor/bundle'"
-run "bundle install"
+run "bundle install --binstubs='.bundle/bin' --path='./vendor/bundle'"
 
 application <<GENERATORS
 config.generators do |g|
