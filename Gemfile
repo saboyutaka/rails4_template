@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.3'
 
-# MySQL
+# Middlewares
 gem 'mysql2'
+gem 'redis'
 
 # Assets
 gem 'slim'
@@ -28,19 +28,20 @@ group :development, :test do
   # Web Server
   gem 'puma'
 
-  # Rails Generator Helper
-  gem 'slim-rails'
-
   # Testing
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'ffaker' # Generates dummy names
   gem 'capybara'
   gem 'launchy'
+  
+  # Factory
+  gem 'factory_girl_rails'
+  gem 'ffaker' # Generates dummy names
 
   # Deploy
   gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
 
   # Debugger
   gem 'pry-rails'
@@ -66,6 +67,8 @@ group :development do
   gem 'quiet_assets'
   gem 'letter_opener'
   gem 'mail_view'
+  gem 'bullet'
+  gem 'xray-rails'
 end
 
 group :test do
