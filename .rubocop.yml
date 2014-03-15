@@ -6,8 +6,15 @@ AllCops:
   Excludes:
     - 'vendor/bundle/**/*'
     - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'config/deploy*'
+    - 'config/unicorn*'
     - 'config/initializers/secret_token.rb'
-    - 'spec/support/share_db_connection.rb'
+
+# Avoid classes longer than 300 lines of code.
+ClassLength:
+  Enabled: true
+  Max: 300
 
 # Limit lines to 120 characters.
 LineLength:
@@ -29,4 +36,28 @@ StringLiterals:
 
 # Document classes and non-namespace modules.
 Documentation:
+  Enabled: false
+
+# Align the elements of a hash literal if they span more than one line.
+AlignHash:
+  Enabled: false
+
+# Align the parameters of a method call if they span more than one line.
+AlignParameters:
+  Enabled: false
+
+# Favor modifier if/unless usage when you have a single-line body.
+IfUnlessModifier:
+  Enabled: false
+
+# Use the new lambda literal syntax for single-line blocks.
+Lambda:
+  Enabled: false
+
+# Avoid complex methods.
+CyclomaticComplexity:
+  Enabled: false
+
+# Use only ascii symbols in comments.
+AsciiComments:
   Enabled: false
